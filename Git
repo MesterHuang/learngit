@@ -19,8 +19,17 @@
 
 	   nothing to commit, working tree clean
 		------------------------------------------------------------------------------------ 
+		
+	情况二：没有东西需要提交，而且工作目录是干净的【有一个commit可以push到origin/master分支】
+		------------------------------------------------------------------------------------
+		On branch master
+		Your branch is ahead of 'origin/master' by 1 commit.
+		  (use "git push" to publish your local commits)
+
+		nothing to commit, working tree clean
+		------------------------------------------------------------------------------------
 	  
-	情况二：【Changes not staged for commit】表示还没被添加到暂缓区
+	情况三：【Changes not staged for commit】表示还没被添加到暂缓区
 		------------------------------------------------------------------------------------
 		On branch master
 		Your branch is up to date with 'origin/master'.
@@ -34,7 +43,7 @@
 		no changes added to commit (use "git add" and/or "git commit -a")
 		------------------------------------------------------------------------------------
 
-	情况三：【Changes to be committed】，表示已经添加到暂缓区了，正在准备被提交（commit）。
+	情况四：【Changes to be committed】，表示已经添加到暂缓区了，正在准备被提交（commit）。
 		------------------------------------------------------------------------------------
 		On branch master
 		Your branch is up to date with 'origin/master'.
