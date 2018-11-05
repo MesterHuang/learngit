@@ -1,0 +1,64 @@
+
+一、把文件添加到版本库
+	1、添加到版本库的暂缓区（stage/index），用git add命令 (例子：git add Git)
+
+	2、提交到版本库的暂缓区（stage/index），用git commit -m "some msg"命令 (例子：git commit -m "add Git file")
+	------------------------------------------------------------------------------------
+	  F:\TestProjection\learngit>git commit -m "add Git file"
+							 [master (root-commit) 7e71d95] add Git file
+							 1 file changed, 0 insertions(+), 0 deletions(-)
+							 create mode 100644 Git
+	------------------------------------------------------------------------------------
+
+二、查看状态(git status )
+
+	情况一：没有东西需要提交，而且工作目录是干净的
+		------------------------------------------------------------------------------------
+	   On branch master
+	   Your branch is up to date with 'origin/master'.
+
+	   nothing to commit, working tree clean
+		------------------------------------------------------------------------------------ 
+	  
+	情况二：【Changes not staged for commit】表示还没被添加到暂缓区
+		------------------------------------------------------------------------------------
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git checkout -- <file>..." to discard changes in working directory)
+
+				modified:   Git
+
+		no changes added to commit (use "git add" and/or "git commit -a")
+		------------------------------------------------------------------------------------
+
+	情况三：【Changes to be committed】，表示已经添加到暂缓区了，正在准备被提交（commit）。
+		------------------------------------------------------------------------------------
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		Changes to be committed:
+		  (use "git reset HEAD <file>..." to unstage)
+
+				modified:   Git
+		------------------------------------------------------------------------------------
+
+三、提交修改(git add & git commit -m "**")
+1、 将文件添加到暂缓区(git add 'file')
+
+2、 提交commit (git commit -m "***")
+
+
+
+
+
+
+
+
+
+
+
+
+
