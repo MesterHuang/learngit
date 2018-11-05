@@ -49,6 +49,11 @@
 1、 将文件添加到暂缓区(git add 'file')
 
 2、 提交commit (git commit -m "***")
+		------------------------------------------------------------------------------------
+		F:\TestProjection\learngit>git commit -m "update Git file"
+		[master 4983b4f] update Git file
+		 1 file changed, 64 insertions(+)
+		------------------------------------------------------------------------------------
 
 
 
