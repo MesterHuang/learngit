@@ -98,36 +98,41 @@
 		因为Git是分布式的版本控制系统
 
 2、回退版本命令
-  2.1: git reset --hard commit_id（id前7位）
-  
-	  --回退之前-----------------------------------------------------------------------------
-	  F:\TestProjection\learngit>git log --pretty=oneline
-		ef8b60a525882486e1242b1bc9be2af84e556e46 (HEAD -> master, origin/master) update Git file 'version return'
-		c9e97d39de7b14c170adfe269c0f506c874515f6 update Git file
-		4983b4f08832fd483feb469f823aea9879f907d4 update Git file
-		7e71d9508684ade9b247d44f5910d7ecb77b31c4 add Git file
-	  --------------------------------------------------------------------------------------
-	  &> git reset --hard c9e97d3 【回退到指定的版本】
+
+	情况一：还在工作区
+	  2.1：git checkout -- file(文件名)
 	  
-	  --回退之后----------------------------------------------------------------------------
-	  F:\TestProjection\learngit>git log --pretty=oneline
-		c9e97d39de7b14c170adfe269c0f506c874515f6 (HEAD -> master) update Git file
-		4983b4f08832fd483feb469f823aea9879f907d4 update Git file
-		7e71d9508684ade9b247d44f5910d7ecb77b31c4 add Git file
-	  --------------------------------------------------------------------------------------
-	  &> git reflog  【(查看命令历史)这个命令记录着我们的每一个命令，不管是回退的还是没有回退的】
-	  --------------------------------------------------------------------------------------
-	  F:\TestProjection\learngit>git reflog
-		c9e97d3 (HEAD -> master) HEAD@{0}: reset: moving to c9e97d3
-		ef8b60a (origin/master) HEAD@{1}: commit: update Git file 'version return'
-		c9e97d3 (HEAD -> master) HEAD@{2}: commit: update Git file
-		4983b4f HEAD@{3}: commit: update Git file
-		7e71d95 HEAD@{4}: commit (initial): add Git file
-	  ---------------------------------------------------------------------------------------
-  
-  2.2: git reset --hard HEAD^
-	  说明：HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，
-			当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100
+	情况二：已经add加到暂存区
+	  2.2.1: git reset --hard commit_id（id前7位）
+	  
+		  --回退之前-----------------------------------------------------------------------------
+		  F:\TestProjection\learngit>git log --pretty=oneline
+			ef8b60a525882486e1242b1bc9be2af84e556e46 (HEAD -> master, origin/master) update Git file 'version return'
+			c9e97d39de7b14c170adfe269c0f506c874515f6 update Git file
+			4983b4f08832fd483feb469f823aea9879f907d4 update Git file
+			7e71d9508684ade9b247d44f5910d7ecb77b31c4 add Git file
+		  --------------------------------------------------------------------------------------
+		  &> git reset --hard c9e97d3 【回退到指定的版本】
+		  
+		  --回退之后----------------------------------------------------------------------------
+		  F:\TestProjection\learngit>git log --pretty=oneline
+			c9e97d39de7b14c170adfe269c0f506c874515f6 (HEAD -> master) update Git file
+			4983b4f08832fd483feb469f823aea9879f907d4 update Git file
+			7e71d9508684ade9b247d44f5910d7ecb77b31c4 add Git file
+		  --------------------------------------------------------------------------------------
+		  &> git reflog  【(查看命令历史)这个命令记录着我们的每一个命令，不管是回退的还是没有回退的】
+		  --------------------------------------------------------------------------------------
+		  F:\TestProjection\learngit>git reflog
+			c9e97d3 (HEAD -> master) HEAD@{0}: reset: moving to c9e97d3
+			ef8b60a (origin/master) HEAD@{1}: commit: update Git file 'version return'
+			c9e97d3 (HEAD -> master) HEAD@{2}: commit: update Git file
+			4983b4f HEAD@{3}: commit: update Git file
+			7e71d95 HEAD@{4}: commit (initial): add Git file
+		  ---------------------------------------------------------------------------------------
+	  
+	  2.2.2: git reset --hard HEAD^
+		  说明：HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，
+				当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100
 
 
 
