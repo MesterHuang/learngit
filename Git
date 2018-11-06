@@ -53,6 +53,19 @@
 
 				modified:   Git
 		------------------------------------------------------------------------------------
+		
+	情况五：【Untracked files】，意思是还没添加追踪，从没git add过，所以没被git版本库管理起来。
+        ------------------------------------------------------------------------------------
+		On branch master
+		Your branch is up to date with 'origin/master'.
+
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+
+				Git
+
+		nothing added to commit but untracked files present (use "git add" to track)
+        ------------------------------------------------------------------------------------		
 
 三、提交修改(git add & git commit -m "**")
 
