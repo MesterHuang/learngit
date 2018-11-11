@@ -247,8 +247,19 @@
 		-----------------------------------------------------------------------------------------------
 		
 六、解决冲突
+
+       合并时冲突
+		------------------------------------------------------------
+			F:\TestProjection\learngit>git merge dev
+			Auto-merging git.txt
+			CONFLICT (content): Merge conflict in git.txt
+			Automatic merge failed; fix conflicts and then commit the result.
+			F:\TestProjection\learngit>
+		------------------------------------------------------------
     		
-		
+		 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+		 【Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容】
+         用git log --graph命令可以看到分支合并图。
 		
 		
 		
