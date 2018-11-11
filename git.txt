@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 add test merge  --master
 add test merge  --dev
-=======
-add test merge  --dev
->>>>>>> dev
+
+
