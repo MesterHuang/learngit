@@ -183,7 +183,7 @@
 		2.3、上述两种合并的区别(git log --graph --pretty=oneline --abbrev-commit)
 		
 			git merge 【分支名】
-			---------------
+			---------------------------------------------------------------------------------
 			F:\TestProjection\learngit>git log --graph --pretty=oneline --abbrev-commit
 			* 712edff (HEAD -> dev, origin/master, master) update Git file
 			* 53d9d2d update Git file
@@ -205,7 +205,7 @@
 			* 7e71d95 add Git file
 
 			F:\TestProjection\learngit>
-			---------------
+			----------------------------------------------------------------------------------
 			
 			git merge --no-ff -m "merge with no-ff" 【分支名】
 			----------------
