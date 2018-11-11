@@ -208,7 +208,7 @@
 			---------------
 			
 			git merge --no-ff -m "merge with no-ff" 【分支名】
-			----------------
+			---------------------------------------------------------------------------------------
 			F:\TestProjection\learngit>git log --graph --pretty=oneline --abbrev-commit
 			*   38685a3 (HEAD -> master) merge with no-ff
 			|\
@@ -234,7 +234,7 @@
 			* 7e71d95 add Git file
 
 			F:\TestProjection\learngit>
-			----------------
+			---------------------------------------------------------------------------------------
 			
 		
 	3、删除
