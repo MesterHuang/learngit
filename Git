@@ -170,8 +170,72 @@
 			---------------------------------------------------------------------------------------------------
 
 		2.2、合并分支(git merge --no-ff -m "merge with no-ff" 【分支名】)
+			---------------------------------------------------------------------------------------------
+				F:\TestProjection\learngit>
+				F:\TestProjection\learngit>git merge --no-ff -m "merge with no-ff" dev
+				Merge made by the 'recursive' strategy.
+				 Git | 29 ++++++++++++++++++++---------
+				 1 file changed, 20 insertions(+), 9 deletions(-)
+
+				F:\TestProjection\learngit>
+			---------------------------------------------------------------------------------------------
+			
+		2.3、上述两种合并的区别(git log --graph --pretty=oneline --abbrev-commit)
 		
-		
+			git merge 【分支名】
+			---------------
+			F:\TestProjection\learngit>git log --graph --pretty=oneline --abbrev-commit
+			* 712edff (HEAD -> dev, origin/master, master) update Git file
+			* 53d9d2d update Git file
+			* 3f8f003 deleted test
+			* d6cca48 add test.txt
+			* 9ea989d deleted LICENSE file
+			* a2c9222 deleted test file
+			* 423ba89 update Git file
+			* 8c61f13 update test file
+			* d7a638d update test file
+			* a38b319 add LICENSE and update test
+			* 0278530 add test file
+			* 5673e5d update Git file 'add git status type'
+			* 3f136b1 update Git file 'version return 1.1'
+			* 7b400aa update Git file 'versio return 1.'
+			* ef8b60a update Git file 'version return'
+			* c9e97d3 update Git file
+			* 4983b4f update Git file
+			* 7e71d95 add Git file
+
+			F:\TestProjection\learngit>
+			---------------
+			
+			git merge --no-ff -m "merge with no-ff" 【分支名】
+			----------------
+			F:\TestProjection\learngit>git log --graph --pretty=oneline --abbrev-commit
+			*   38685a3 (HEAD -> master) merge with no-ff
+			|\
+			| * 241986c (dev) update Git file --dev
+			|/
+			* 712edff (origin/master) update Git file
+			* 53d9d2d update Git file
+			* 3f8f003 deleted test
+			* d6cca48 add test.txt
+			* 9ea989d deleted LICENSE file
+			* a2c9222 deleted test file
+			* 423ba89 update Git file
+			* 8c61f13 update test file
+			* d7a638d update test file
+			* a38b319 add LICENSE and update test
+			* 0278530 add test file
+			* 5673e5d update Git file 'add git status type'
+			* 3f136b1 update Git file 'version return 1.1'
+			* 7b400aa update Git file 'versio return 1.'
+			* ef8b60a update Git file 'version return'
+			* c9e97d3 update Git file
+			* 4983b4f update Git file
+			* 7e71d95 add Git file
+
+			F:\TestProjection\learngit>
+			----------------
+			
 		
 	3、删除
 		3.1、删除分支(git branch -d 【分支名】)
